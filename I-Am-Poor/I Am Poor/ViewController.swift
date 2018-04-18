@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  I Am Poor
 //
-//  Created by Angela Yu on 24/08/2016.
-//
+//  Created by Alexis San Javier on 4/11/18.
+//  Copyright © 2018 The Mexineer. All rights reserved.
 //
 
 import UIKit
