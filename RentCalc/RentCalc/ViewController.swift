@@ -13,16 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var rent: UITextField!
     @IBOutlet weak var electric: UITextField!
     @IBOutlet weak var internet: UITextField!
+    @IBOutlet weak var finalAmount: UILabel!
     
-    var rentValue : Double = 0
-    var electricValue : Double = 0
-    var internetValue : Double = 0
+    var rentAmount : Double?
+    var electricAmount : Double?
+    var internetAmount : Double?
+    var total : Double?
+    
+    var rentValue : Double?
+    var electricValue : Double?
+    var internetValue : Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rent.text = "rent"
-        electric.text = "electric"
-        internet.text = "internet"
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,9 +33,14 @@ class ViewController: UIViewController {
     }
 
     func calculateRent(){
-        print(rent.text)
-        print(electric.text)
-        print(internet.text)
+        rentAmount = Double(rent.text!)
+        electricAmount = Double(electric.text!)
+        internetAmount = Double(internet.text!)
+        
+        total = (rentAmount!/3) + (electricAmount!/3) + (internetAmount!/3)
+        total = total! - electricAmount!
+        
+        finalAmount.text = String(total!)
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
