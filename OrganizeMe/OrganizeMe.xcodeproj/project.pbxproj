@@ -76,6 +76,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B051821220898DCA00D12838 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0D629E8206D4D2A0077F6EF /* LaunchScreen.storyboard */,
+				B0D629EB206D4D2A0077F6EF /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B051821320898DD300D12838 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0D629DC206D4D2A0077F6EF /* AppDelegate.swift */,
+				B0D629DE206D4D2A0077F6EF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B051821420898DD900D12838 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0D629E6206D4D2A0077F6EF /* Assets.xcassets */,
+				B0D629E0206D4D2A0077F6EF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B051821520898DDE00D12838 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B0D629D0206D4D2A0077F6EF = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +133,10 @@
 		B0D629DB206D4D2A0077F6EF /* OrganizeMe */ = {
 			isa = PBXGroup;
 			children = (
-				B0D629DC206D4D2A0077F6EF /* AppDelegate.swift */,
-				B0D629DE206D4D2A0077F6EF /* ViewController.swift */,
-				B0D629E0206D4D2A0077F6EF /* Main.storyboard */,
-				B0D629E6206D4D2A0077F6EF /* Assets.xcassets */,
-				B0D629E8206D4D2A0077F6EF /* LaunchScreen.storyboard */,
-				B0D629EB206D4D2A0077F6EF /* Info.plist */,
+				B051821520898DDE00D12838 /* Model */,
+				B051821420898DD900D12838 /* View */,
+				B051821320898DD300D12838 /* Controller */,
+				B051821220898DCA00D12838 /* Supporting Files */,
 				B0D629E3206D4D2A0077F6EF /* OrganizeMe.xcdatamodeld */,
 			);
 			path = OrganizeMe;
@@ -191,7 +223,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "The Mexineer";
 				TargetAttributes = {
 					B0D629D8206D4D2A0077F6EF = {
@@ -333,6 +365,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -340,6 +373,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -390,6 +424,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -397,6 +432,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

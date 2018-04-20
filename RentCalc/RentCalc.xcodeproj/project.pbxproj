@@ -35,6 +35,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B051820E20898D0100D12838 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0B1EE9420842CF6004AC41F /* LaunchScreen.storyboard */,
+				B0B1EE9720842CF6004AC41F /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B051820F20898D0C00D12838 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0B1EE8B20842CF5004AC41F /* AppDelegate.swift */,
+				B0B1EE8D20842CF5004AC41F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B051821020898D1700D12838 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0B1EE8F20842CF5004AC41F /* Main.storyboard */,
+				B0B1EE9220842CF6004AC41F /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B051821120898D2100D12838 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B0B1EE7F20842CF5004AC41F = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +88,10 @@
 		B0B1EE8A20842CF5004AC41F /* RentCalc */ = {
 			isa = PBXGroup;
 			children = (
-				B0B1EE8B20842CF5004AC41F /* AppDelegate.swift */,
-				B0B1EE8D20842CF5004AC41F /* ViewController.swift */,
-				B0B1EE8F20842CF5004AC41F /* Main.storyboard */,
-				B0B1EE9220842CF6004AC41F /* Assets.xcassets */,
-				B0B1EE9420842CF6004AC41F /* LaunchScreen.storyboard */,
-				B0B1EE9720842CF6004AC41F /* Info.plist */,
+				B051821120898D2100D12838 /* Model */,
+				B051821020898D1700D12838 /* View */,
+				B051820F20898D0C00D12838 /* Controller */,
+				B051820E20898D0100D12838 /* Supporting Files */,
 			);
 			path = RentCalc;
 			sourceTree = "<group>";
