@@ -125,17 +125,6 @@
                                             <action selector="answerPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MPu-3s-jWf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-7D-5tH">
-                                        <rect key="frame" x="114" y="201" width="147" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Start Over">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="answerPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lKh-Fz-g2P"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16847139596939087" green="0.51802176237106323" blue="0.82454192638397217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -170,7 +159,6 @@
                         <outlet property="progressLabel" destination="qil-6C-XPA" id="vOI-gf-aRi"/>
                         <outlet property="questionLabel" destination="4GJ-Ce-brK" id="pIn-gm-ACF"/>
                         <outlet property="scoreLabel" destination="c0R-Fj-fUI" id="31D-zq-NpU"/>
-                        <outlet property="startOverButton" destination="LiA-7D-5tH" id="vaF-ky-UFB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

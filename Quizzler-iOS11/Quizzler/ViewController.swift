@@ -11,83 +11,81 @@ import UIKit
 class ViewController: UIViewController {
     
     //Place your instance variables here
-    
-
-    @IBOutlet weak var startOverButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var progressBar: UIView!
     @IBOutlet weak var progressLabel: UILabel!
-    var bank = QuestionBank()
-    var question = 0
-    var score = 0
+    
+    let myQuestionBank = QuestionBank()
+    
+    var alert : UIAlertController? = nil
+    var restartAction : UIAlertAction? = nil
+    var questionCounter : Int = 0
+    var playerScore : Int = 0
+    var playerAnswer : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = bank.list[question].questionText
-        scoreLabel.text = "Score: \(score)"
-        progressLabel.text = "\(question+1)/13"
-        startOverButton.isHidden = true
+        startOver()
     }
 
 
     @IBAction func answerPressed(_ sender: UIButton) {
         
-        if sender.tag != 3 && question < 13{
-            updateUI(checkAnswer(sender.tag))
-            nextQuestion()
-        }else if sender.tag == 3{
-            startOver()
+        if sender.tag == 1{
+            playerAnswer = true;
+        }else if sender.tag == 2{
+            playerAnswer = false;
         }
+        
+        checkAnswer(playerAnswer)
     }
     
-    func updateUI(_ result : Bool) {
-        if result == true{
-            score += 1
-            scoreLabel.text = "Score: \(score)"
-        }
+    func updateUI() {
+        questionLabel.text = myQuestionBank.list[questionCounter].questionText
+        scoreLabel.text = "Score: \(playerScore)"
+        progressLabel.text = "\(questionCounter+1)/13"
+        progressBar.frame.size.width = (view.frame.size.width / 13) * CGFloat(questionCounter+1)
     }
     
 
     func nextQuestion() {
+
+        questionCounter += 1
         
-        question += 1
-        if question < 13{
-            questionLabel.text = bank.list[question].questionText
-            progressLabel.text = "\(question+1)/13"
-            
+        if questionCounter <= 12{
+            updateUI()
         }else{
-            startOverButton.isHidden = false
+            
+            alert = UIAlertController(title: "Quiz Complete", message: "Final Score: \(playerScore)", preferredStyle: .alert)
+            restartAction = UIAlertAction(title: "Restart", style: .default) { (UIAlertAction) in
+                self.startOver()
+            }
+            
+            alert?.addAction(restartAction!)
+            
+            present(alert!, animated: true,completion: nil)
         }
-        
     }
     
     
-    func checkAnswer(_ answer : Int) -> Bool {
+    func checkAnswer(_ answer : Bool){
         
-        var correct = true
-        
-        if answer == 2{
-            correct = false
-        } else if answer == 1{
-            correct = true
-        }
-        
-        if correct == bank.list[question].answer{
-            return true
+        if answer == myQuestionBank.list[questionCounter].answer {
+            playerScore += 10
+            ProgressHUD.showSuccess("Correct")
         }else{
-            return false
+            ProgressHUD.showError("Wrong")
         }
+
+        nextQuestion()
     }
     
     
     func startOver() {
-        question = 0
-        score = 0
-        questionLabel.text = bank.list[question].questionText
-        scoreLabel.text = "Score: \(score)"
-        progressLabel.text = "\(question+1)/13"
-        startOverButton.isHidden = true
+        questionCounter = 0
+        playerScore = 0
+        updateUI()
     }
     
 
